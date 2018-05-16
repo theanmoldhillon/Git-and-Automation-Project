@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const babel = require('gulp-babel');
 
 
 gulp.task('default', function(){
@@ -27,5 +28,15 @@ gulp.task('images', function(){
 
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'))
+
+});
+
+gulp.task('js', function(){
+    gulp.src('./src/js/*.js')
+
+    .pipe(babel({
+        presets: ['env']
+    }))
+    .pipe(gulp.dest('./dist/js/'))
 
 });
