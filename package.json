@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/theanmoldhillon/Git-and-Automation-Project#readme",
   "dependencies": {
-    "gulp-autoprefixer": "^5.0.0"
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4"
   }
 }
