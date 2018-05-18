@@ -7,10 +7,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 
-gulp.task('default', function(){
-
-
-});
+gulp.task('default', ["css", "js", "images"]);
 
 gulp.task('css', function(){
   gulp.src('./src/css/*.css')
@@ -47,3 +44,14 @@ gulp.task('js', function(){
     .pipe(gulp.dest('./dist/js/'))
 
 });
+
+gulp.task('watch', ['css', 'js', 'images'], function () {
+    gulp.watch("./src/css/*.css", ["css"]);
+})
+
+
+
+
+
+
+
